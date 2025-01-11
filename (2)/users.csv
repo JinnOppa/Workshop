@@ -1,0 +1,4 @@
+user_id,username,pin,role
+1,admin,1234,Master Admin
+2,john,5678,Admin
+3,jane,9123,Staff

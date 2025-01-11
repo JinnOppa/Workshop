@@ -159,6 +159,15 @@ class InventoryManagementSystem: #InventoryApp:
             self.setup_accounting_tab()
         elif self.role == "Staff":
             self.setup_transactions_tab()
+        
+        # Add "Log Out" button
+        logout_button = ttk.Button(self.root, text="Log Out", command=self.logout)
+        logout_button.pack(side="bottom", pady=10)
+    
+    def logout(self):
+        """Logs out the user and returns to the login screen."""
+        self.tab_control.pack_forget()
+        self.setup_login()
 
     def setup_inventory_tab(self, admin=False):
         # Inventory table
@@ -495,12 +504,12 @@ class InventoryManagementSystem: #InventoryApp:
         if messagebox.askokcancel("Logout", "Do you want to logout and exit?"):
             self.logout()
 
-    def logout(self):
-        self.tab_control.forget(self.inventory_tab)
-        self.tab_control.forget(self.transactions_tab)
-        self.tab_control.forget(self.accounting_tab)
-        self.tab_control.forget(self.user_management_tab)
-        self.setup_login()
+    # def logout(self):
+    #     self.tab_control.forget(self.inventory_tab)
+    #     self.tab_control.forget(self.transactions_tab)
+    #     self.tab_control.forget(self.accounting_tab)
+    #     self.tab_control.forget(self.user_management_tab)
+    #     self.setup_login()
 
 if __name__ == "__main__":
     root = tk.Tk()

@@ -1,0 +1,3 @@
+item_id,item_name,category,unit_measurement,unit_cost,current_quantity,unit_dimension,item_location,last_restock_date
+1,Plat besi (1pcs) (5mm x 500 x 500),Material,Pcs,2000,50,"(5mm x 500 x 500)",Warehouse A,2025-01-01
+2,Kawat Las Alumunium (ER5356)(1,6mm),Material,Kg,1500,30,"(1,6 mm)",Warehouse B,2025-01-05
